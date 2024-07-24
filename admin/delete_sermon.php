@@ -1,5 +1,10 @@
 <?php
 include '../includes/db_connection.php';
+session_start();
+if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']) {
+    header("Location: login.php");
+    exit();
+}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
