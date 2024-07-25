@@ -87,8 +87,8 @@
      <main class=" background-section" style="background: url('../assets/images/teamsbg.jpg') 50%  repeat;">
 
                 <!-- Main Content Area -->
-                <div class="container mt-5">
-                        <div class="jumbotron animate__animated animate__fadeInUp">
+                <div class="container mt-5 ">
+                        <div class="jumbotron  bg-tertiary animate__animated animate__fadeInUp">
                             <h1 class="display-4 text-secondary">Welcome to Spirit and Life</h1>
                             <p class="lead">A place to explore and grow in your spiritual journey.</p>
                             <hr class="my-4">
