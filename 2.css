@@ -1,0 +1,74 @@
+
+
+.sermon-post {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--primary);
+  }
+  
+  .sermon-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sermon-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sermon-header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .sermon-header .sermon-meta {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sermon-header .sermon-meta span {
+    font-size: 0.9em;
+  }
+  
+  .sermon-content p {
+    margin-bottom: 1.5em; /* Adjust spacing between paragraphs */
+    line-height: 1.6; /* Set comfortable line height */
+  }
+  
+  @media (max-width: 767px) {
+    .sermon-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    .sermon-header .sermon-meta {
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: calc(100% - 60px); /* Adjusting for the image width and margin */
+    }
+  
+    .sermon-header .sermon-meta span {
+        font-size: 0.8em;
+    }
+    blockquote.scripture {
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+  }
+  
+  blockquote.scripture p {
+  margin-bottom: 0;
+  }
+  
+  blockquote.scripture .scripture-reference {
+  font-style: normal; /* Override italics for the scripture reference */
+  }
+  
+  }
+  

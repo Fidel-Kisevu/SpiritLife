@@ -1,0 +1,65 @@
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+.card:hover {
+    transform: translateY(-10px );
+    transition: all 0.6s ease;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 20px;
+}
+.card-content {
+    margin-top: 20px;
+}
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}
+.author-meta {
+    display: flex;
+    align-items: center;
+}
+.author-meta div {
+    margin-left: 15px;
+}
+.author-name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.author-date {
+    font-size: 0.875rem;
+}
+.sermon-content p {
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+.sermon-content em {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-left: 4px solid #dee2e6;
+}
+.sermon-content blockquote {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid #ccc;
+    background: #f9f9f9;
+}
+
+

@@ -1,4 +1,28 @@
 
+/* Custom link hover styles */
+ a.text-primary:hover {
+  color: #E79B07 !important; /* Replace with your desired color */
+}
+a.text-secondary:hover{
+  color:#bb7f06 !important;
+}
+.background-section {
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    margin-left:0 ;
+    z-index: 1;
+
+    }
+    
+    .background-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 43, 51, 0.9); /* Adjust the color and opacity */
+    z-index: -8;
+  }
 :root {
     --primary:#1f242b; /* Custom secondary color */
     --secondary:#2d353f; /* Custom primary color */
@@ -37,8 +61,9 @@
 /*Navigation bar*/
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
     min-height: 80px;
-    z-index: 1000; /* Ensure the navbar is above other content */
     width: 100%;
     box-shadow: 0 4px 8px rgb(231, 155, 7, 0.5);
     transition: all 0.3s ease;
@@ -68,6 +93,29 @@
   }
   .nav-links a:hover {
   color: #E79B07 !important;
+  }
+
+  .navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+}
+  
+
+.icon-box {
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .bi{
+    font-size: 1.5rem;
+  }
+  
+  .bi:hover  {
+    color: #E79B07 !important;
+     cursor: pointer;
+     transition: all 0.3s ease;
   }
   
 /*Animation and hover effeccts*/
@@ -109,7 +157,7 @@
 
   .btn:hover{
     background-color: #E79B07;
-    color: #1f242b;
+    color: #1f242b !important;
     transition: all 0.3s ease;
 }
 
@@ -144,76 +192,106 @@
 
 
 /*Body styles*/
-.card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
-.card:hover {
+
+
+.sermon-post {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sermon-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sermon-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sermon-header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .sermon-header .sermon-meta {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sermon-header .sermon-meta span {
+    font-size: 0.9em;
+  }
+  
+  .sermon-content p {
+    margin-bottom: 1.5em; /* Adjust spacing between paragraphs */
+    line-height: 1.2; /* Set comfortable line height */
+  }
+  
+  @media (max-width: 767px) {
+    .sermon-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    .sermon-header .sermon-meta {
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: calc(100% - 60px); /* Adjusting for the image width and margin */
+    }
+  
+    .sermon-header .sermon-meta span {
+        font-size: 0.8em;
+    }
+    blockquote.scripture {
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0;
+  }
+  
+  blockquote.scripture p {
+  margin-bottom: 0;
+  }
+  
+  blockquote.scripture .scripture-reference {
+  font-style: normal; /* Override italics for the scripture reference */
+  }
+  
+  }
+  .card:hover {
     transform: translateY(-10px );
     transition: all 0.6s ease;
 }
 
-.profile-img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-.card-body {
-    padding: 20px;
-}
-.card-content {
-    margin-top: 20px;
-}
-.card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-.card-text {
-    font-size: 1rem;
-    color: #333;
-}
-.author-meta {
-    display: flex;
-    align-items: center;
-}
-.author-meta div {
-    margin-left: 15px;
-}
-.author-name {
-    font-weight: bold;
-    font-size: 1rem;
-}
-.author-date {
-    font-size: 0.875rem;
-}
-.sermon-content p {
-    margin-bottom: 0.7rem;
-    line-height: 1.6;
-}
-.sermon-content em {
-    display: block;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    font-style: italic;
-    background-color: #f8f9fa;
-    border-left: 4px solid #dee2e6;
-}
-.sermon-content blockquote {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 5px solid #ccc;
-    background: #f9f9f9;
-}
-
-
+hr.custom-hr {
+    border: none;
+    height: 1px; /* Adjust height as needed */
+    background-color: #E79B07;
+  }
 
 
 
 @media (max-width: 768px) {
     .carousel-caption {
         display: block !important; /* Ensure captions are displayed on small screens */
+
     }
+    
+
+
 }
+
+@media (min-width: 768px) {
+    .lg-large-font {
+        font-size: 1.2rem; /* Adjust the size as needed */
+    }
+
+
+}
+

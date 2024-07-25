@@ -177,7 +177,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
                             </div>
                             <div class='card-content mt-3'>
                                 <a href='edit_sermon.php?id=" . $sermon['id'] . "' class='btn btn-warning'>Edit</a>
-                                <a href='#' class='btn btn-danger' onclick=\"confirmAction('delete', 'Are you sure you want to delete this sermon?', 'delete_sermon.php?id=" . $sermon['id'] . "')\">Delete</a>
+                                <a href='delete_sermon.php?id=" .$sermon['id'] ."' class='btn btn-danger' onclick=\"confirmAction('delete', 'Are you sure you want to delete this sermon?', 'delete_sermon.php?id=" . $sermon['id'] . "')\">Delete</a>
                             </div>
                         </div>
                     </div>
