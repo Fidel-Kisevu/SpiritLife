@@ -5,69 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sermons</title>
     <link href="../assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../assets/styles/custom.css">
     <style>
-        .card {
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-        }
-        .profile-img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-        }
-        .card-body {
-            padding: 20px;
-        }
-        .card-content {
-            margin-top: 20px;
-        }
-        .card-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-        .card-text {
-            font-size: 1rem;
-            color: #333;
-        }
-        .author-meta {
-            display: flex;
-            align-items: center;
-        }
-        .author-meta div {
-            margin-left: 15px;
-        }
-        .author-name {
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        .author-date {
-            color: #6c757d;
-            font-size: 0.875rem;
-        }
-        .sermon-content p {
-            margin-bottom: 0.7rem;
-            line-height: 1.6;
-        }
-        .sermon-content em {
-            display: block;
-            margin: 1rem 0;
-            padding: 0.5rem;
-            font-style: italic;
-            background-color: #f8f9fa;
-            border-left: 4px solid #dee2e6;
-        }
-        .sermon-content blockquote {
-            padding: 1rem;
-            margin: 1rem 0;
-            border-left: 5px solid #ccc;
-            background: #f9f9f9;
-        }
+        
     </style>
 </head>
 <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg  bg-primary">
+         <a class="navbar-brand text-secondary" href="#">SpiritLife</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav">
+                 <li class="nav-item">
+                     <a class="nav-link btn text-primary btn-secondary " href="#">Bible</a>
+                 </li>
+                 <li class="nav-item active">
+                     <a class="nav-link text-primary" href="#">Home</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-primary" href="#">Sermons</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-primary" href="#">Authors</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-primary" href="#">About</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link text-primary" href="#">Contact</a>
+                 </li>
+             </ul>
+         </div>
+     </nav>
+     
+         <!-- Carousel -->
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+             <ol class="carousel-indicators">
+                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+             </ol>
+             <div class="carousel-inner">
+                 <div class="carousel-item active">
+                     <img src="../assets/images/uploads/istockphoto-1076215430-1024x1024.jpg" class="d-block w-100" alt="First slide">
+                     <div class="carousel-caption animate__animated animate__fadeIn">
+                         <h5>First Slide</h5>
+                         <p>Description for the first slide.</p>
+                     </div>
+                 </div>
+                 <div class="carousel-item">
+                     <img src="../assets/images/uploads/istockphoto-1076215430-1024x1024.jpg" class="d-block w-100" alt="Second slide">
+                     <div class="carousel-caption animate__animated animate__fadeIn">
+                         <h5>Second Slide</h5>
+                         <p>Description for the second slide.</p>
+                     </div>
+                 </div>
+                 <div class="carousel-item">
+                     <img src="../assets/images/uploads/istockphoto-1076215430-1024x1024.jpg" class="d-block w-100" alt="Third slide">
+                     <div class="carousel-caption animate__animated animate__fadeIn">
+                         <h5>Third Slide</h5>
+                         <p>Description for the third slide.</p>
+                     </div>
+                 </div>
+             </div>
+             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Previous</span>
+             </a>
+             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
+             </a>
+         </div>
+     
+         <!-- Main Content Area -->
+         <div class="container mt-5">
+             <div class="jumbotron animate__animated animate__fadeInUp">
+                 <h1 class="display-4">Welcome to Spirit and Life</h1>
+                 <p class="lead">A place to explore and grow in your spiritual journey.</p>
+                 <hr class="my-4">
+                 <p>Discover sermons, connect with authors, and get inspired.</p>
+                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+             </div>
+         </div>
+         
     <div class="container mt-5 ">
         <?php
         include '../includes/db_connection.php';
@@ -113,9 +139,19 @@
 
         $conn->close();
         ?>
-    </div>
-    <script src="../assets/scripts/jquery.min.js"></script>
-    <script src="../assets/scripts/popper.min.js"></script>
-    <script src="../assets/scripts/bootstrap.min.js"></script>
-</body>
-</html>
+        </div>
+     
+         <!-- Footer -->
+         <footer class="bg-light text-center text-lg-start mt-5">
+             <div class="text-center p-3">
+                 © 2024 Spirit and Life. All Rights Reserved.
+             </div>
+         </footer>
+     
+         <!-- Bootstrap JavaScript and dependencies -->
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     </body>
+     </html>
+     

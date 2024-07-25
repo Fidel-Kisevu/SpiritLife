@@ -1,0 +1,219 @@
+
+:root {
+    --primary:#1f242b; /* Custom secondary color */
+    --secondary:#2d353f; /* Custom primary color */
+    --tertiary:#dfe4b3;
+    --heading-color:#E79B07; /* Custom color for headings */
+    --paragraph-color: #ffffff; /* Custom color for paragraphs */
+}
+
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+.bg-tertiary{
+    background-color:var(--tertiary)  !important;
+}
+
+.text-primary {
+    color: var(--paragraph-color) !important;
+}
+
+.text-secondary {
+    color: var(--heading-color) !important;
+}
+.btn-primary{
+    background-color:var(--secondary);
+}
+
+
+
+
+
+/*Navigation bar*/
+
+.navbar {
+    min-height: 80px;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    width: 100%;
+    box-shadow: 0 4px 8px rgb(231, 155, 7, 0.5);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav {
+    flex-direction: column; /* Aligns the nav items in a row */
+    margin-left: auto; /* Pushes the nav items to the right */
+}
+
+
+.navbar-brand {
+    margin-right: auto; /* Ensures the brand stays on the left side */
+    font-family: "MagistralTT-Bold";
+    font-size: 36px;
+}
+.nav-item {
+    margin-right: 15px;
+} 
+
+
+.nav-links a {
+    font-size: 1rem; /* Adjust font size if needed */
+    text-decoration: none; /* Remove underline from links */
+    margin-right: 20px;
+  
+  }
+  .nav-links a:hover {
+  color: #E79B07 !important;
+  }
+  
+/*Animation and hover effeccts*/
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#E79B07; /* Blue color */
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .nav-link:hover {
+    animation: moveLeftBack 0.6s ease forwards;
+    color: inherit !important;
+  }
+
+  @keyframes moveLeftBack {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .btn:hover{
+    background-color: #E79B07;
+    color: #1f242b;
+    transition: all 0.3s ease;
+}
+
+
+
+
+/*Corousel Styles*/
+
+
+.carousel {
+    margin-top: auto; /* Add margin to avoid overlap with fixed navbar */
+}
+.carousel-inner {
+    max-height: 400px; /* Set a maximum height for the carousel */
+}
+.carousel-inner img {
+    width: 100%; /* Ensure images fit the width of the carousel */
+    height: 100%; /* Ensure images fit the height of the carousel */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+.carousel-caption {
+    bottom: 20px; /* Adjust the position of the caption */
+}
+.carousel-caption h5, .carousel-caption p {
+    color: #fff; /* Ensure caption text is white */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the captions */
+    padding: 10px; /* Add padding around the caption text */
+}
+
+
+
+
+
+/*Body styles*/
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+.card:hover {
+    transform: translateY(-10px );
+    transition: all 0.6s ease;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 20px;
+}
+.card-content {
+    margin-top: 20px;
+}
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}
+.author-meta {
+    display: flex;
+    align-items: center;
+}
+.author-meta div {
+    margin-left: 15px;
+}
+.author-name {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.author-date {
+    font-size: 0.875rem;
+}
+.sermon-content p {
+    margin-bottom: 0.7rem;
+    line-height: 1.6;
+}
+.sermon-content em {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-style: italic;
+    background-color: #f8f9fa;
+    border-left: 4px solid #dee2e6;
+}
+.sermon-content blockquote {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid #ccc;
+    background: #f9f9f9;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        display: block !important; /* Ensure captions are displayed on small screens */
+    }
+}
