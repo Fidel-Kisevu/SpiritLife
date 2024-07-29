@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Spirit and Life</title>
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/animate.min.css">
     <link rel="stylesheet" href="assets/styles/custom.css">
-    <link rel="stylesheet" href="assets/font/bootstrap-icons.css">
-    <script src="assets/scripts/jquery.min.js"></script>
-</head>
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.css"> <!-- Adjust the path to where you placed the font directory -->
+    <script src="assets/scripts/jquery.min.js" ></script>
+
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-primary">
@@ -88,9 +89,19 @@
 
     </main>
 
-    
+    <script>
+        $(document).ready(function () {
+            $('.navbar-toggler').click(function () {
+                $('#menu-icon').toggleClass('bi-house-door bi-x');
+            });
+        });
+    </script>
+             <!-- Bootstrap JavaScript and dependencies -->
+         <script src="assets/scripts/popper.min.js"></script>
+         <script src="assets/scripts/bootstrap.min.js"></script>
 
-    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
-    <script src="assets/scripts/custom.js"></script>
-</body>
-</html>
+       
+     </body>
+ 
+     </html>
+     

@@ -25,12 +25,39 @@
         </div>
     </header>
 
+    <!-- Search and Filter Section -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <form id="filterForm" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="searchTitle" placeholder="Search by Title">
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" id="filterSpeaker">
+                        <option value="">Filter by Speaker</option>
+                        <option value="John Doe">John Doe</option>
+                        <option value="Jane Smith">Jane Smith</option>
+                        <option value="Another Speaker">Another Speaker</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="date" class="form-control" id="filterDate">
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" onclick="filterSermons()">Apply Filters</button>
+                    <button type="reset" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- Sermons Section -->
     <section class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row" id="sermonsContainer">
                 <!-- Sermon Card -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 sermon-item" data-title="Title of Sermon" data-speaker="John Doe" data-date="2024-07-25">
                     <div class="card sermon-card">
                         <img src="path-to-image.jpg" class="card-img-top" alt="Sermon Image">
                         <div class="card-body">
@@ -44,7 +71,7 @@
                 </div>
 
                 <!-- Repeat for more sermons -->
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 sermon-item" data-title="Another Sermon" data-speaker="Jane Smith" data-date="2024-07-20">
                     <div class="card sermon-card">
                         <img src="path-to-image.jpg" class="card-img-top" alt="Sermon Image">
                         <div class="card-body">
@@ -66,5 +93,33 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function filterSermons() {
+            var title = $('#searchTitle').val().toLowerCase();
+            var speaker = $('#filterSpeaker').val();
+            var date = $('#filterDate').val();
+            
+            $('.sermon-item').each(function() {
+                var itemTitle = $(this).data('title').toLowerCase();
+                var itemSpeaker = $(this).data('speaker');
+                var itemDate = $(this).data('date');
+                
+                var matchesTitle = title === "" || itemTitle.includes(title);
+                var matchesSpeaker = speaker === "" || itemSpeaker === speaker;
+                var matchesDate = date === "" || itemDate === date;
+                
+                if (matchesTitle && matchesSpeaker && matchesDate) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+
+        // Optionally, you can reset filters and show all items when the form is reset
+        $('#filterForm').on('reset', function() {
+            $('.sermon-item').show();
+        });
+    </script>
 </body>
 </html>
