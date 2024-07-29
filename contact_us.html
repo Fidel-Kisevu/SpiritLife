@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Spirit and Life</title>
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/custom.css">
+    <link rel="stylesheet" href="assets/font/bootstrap-icons.css">
+    <script src="assets/scripts/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <a class="navbar-brand text-secondary" href="#">SpiritLife</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-house-door text-primary" id="menu-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#">Sermons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#">Bible</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="about_us.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+      <main class="background-section" style="background: url('assets/images/teamsbg.jpg') 50% repeat;">
+        <div class="container mt-5">
+            <div class="jumbotron bg-secondary">
+                <h1 class="display-4 text-secondary">Contact Us</h1>
+                <p class="lead text-primary">We'd love to hear from you! Please fill out the form below to get in touch.</p>
+            </div>
+    
+        </div>
+     
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form action="send_email.php" method="post" class="bg-light p-5 rounded-lg shadow">
+                    <div class="form-group">
+                        <label for="name" class="text-primary">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="text-primary">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="text-primary">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="text-primary">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary border-0">Send Message</button>
+                </form>
+            </div>
+        </div>
+<!-- Follow Us Section -->
+<section class="follow-us-section py-4 mb-5">
+    <div class="container">
+        <div class="col-md-3 mb-3 mx-auto">
+            <h5 class="text-secondary text-center">Follow us</h5>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="text-primary mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-primary mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-primary mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-primary mx-2"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+    
+
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/custom.js"></script>
+</body>
+</html>

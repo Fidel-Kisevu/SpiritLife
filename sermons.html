@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .sermon-card {
+            transition: transform 0.3s ease;
+        }
+        .sermon-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-secondary py-4">
+        <div class="container">
+            <h1 class="text-light">Sermons</h1>
+            <p class="text-light">Explore our collection of sermons to uplift and inspire.</p>
+        </div>
+    </header>
+
+    <!-- Sermons Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sermon Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card sermon-card">
+                        <img src="path-to-image.jpg" class="card-img-top" alt="Sermon Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Title of Sermon</h5>
+                            <p class="card-text">Date: July 25, 2024</p>
+                            <p class="card-text">Speaker: John Doe</p>
+                            <p class="card-text">A brief description of the sermon goes here. It gives an insight into the topic and theme.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat for more sermons -->
+                <div class="col-md-4 mb-4">
+                    <div class="card sermon-card">
+                        <img src="path-to-image.jpg" class="card-img-top" alt="Sermon Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Title of Another Sermon</h5>
+                            <p class="card-text">Date: July 20, 2024</p>
+                            <p class="card-text">Speaker: Jane Smith</p>
+                            <p class="card-text">A brief description of the sermon goes here. It gives an insight into the topic and theme.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional sermon cards go here -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
